@@ -21,7 +21,7 @@ resource "aws_instance" "this" {
 }
 
 resource "aws_iam_user" {
-  name = "dev-user"
+  name = "vcristian"
 
   tags = {
     Environment = "dev"
@@ -29,9 +29,10 @@ resource "aws_iam_user" {
 }
 
 resource "aws_s3_bucket" "dev" {
-  bucket = "s3-bucket-dev"
+  bucket = "s3-bucket-eben2026-ter-lesson"
 
   tags = {
     Environment = "dev"
+    managed_by = "terraform"
   }
 }
