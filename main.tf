@@ -19,3 +19,19 @@ resource "aws_instance" "this" {
     Name = "web"
   }
 }
+
+resource "aws_iam_user" {
+  name = "dev-user"
+
+  tags = {
+    Environment = "dev"
+  }
+}
+
+resource "aws_s3_bucket" "dev" {
+  bucket = "s3-bucket-dev"
+
+  tags = {
+    Environment = "dev"
+  }
+}
