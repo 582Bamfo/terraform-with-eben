@@ -19,3 +19,20 @@ resource "aws_instance" "this" {
     Name = "web"
   }
 }
+
+resource "aws_iam_user" {
+  name = "vcristian"
+
+  tags = {
+    Environment = "dev"
+  }
+}
+
+resource "aws_s3_bucket" "dev" {
+  bucket = "s3-bucket-eben2026-ter-lesson"
+
+  tags = {
+    Environment = "dev"
+    managed_by = "terraform"
+  }
+}
