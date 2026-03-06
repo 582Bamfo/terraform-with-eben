@@ -18,7 +18,7 @@ resource "aws_instance" "this" {
 
   metadata_options {
        http_endpoint          = "enabled"
-       http_token             = "required"
+       http_tokens             = "required"
        instance_metadata_tags = "enabled"
   }
   tags = {
@@ -26,7 +26,7 @@ resource "aws_instance" "this" {
   }
 }
 
-resource "aws_iam_user" {
+resource "aws_iam_user" "user" {
   name = "vcristian"
   force_destroy = false
   tags = {
@@ -47,12 +47,12 @@ resource "aws_iam_group" "dev" {
   name = "dev"
 }
 
-resource "aws_iam_group_policy_attachement" "dev_policy" {
+resource "aws_iam_group_policy_attachment" "dev_policy" {
   group = aws_iam_group.dev.name
   policy_arn = "arn:aws:iam::aws:policy/ReadOnlyAccess"
 }
 
 resource "aws_iam_user_group_membership" "dev_membership" {
-  user = aws_iam_user.name
+  user = aws_iam_user.user.name
   groups = [aws_iam_group.dev.name]
 }
