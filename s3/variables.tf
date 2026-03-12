@@ -1,5 +1,5 @@
 
-variable "aws_s3_bucket" {
+variable "s3_bucket" {
   description = "The name of the S3 bucket"
   type        = string
   default     = "s3-bucket-eben2026-ter-lesson"

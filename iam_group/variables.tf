@@ -1,6 +1,7 @@
 variable "group_name" {
   description = "Name of the IAM group"
   type        = string
+  default     = "prod"
 }
 
 variable "policy_arn" {
