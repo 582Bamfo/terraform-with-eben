@@ -5,6 +5,7 @@ module "instance" {
 
 module "iam_user" {
   source = "./iam_user"
+  iam_user_name = var.iam_user_name
 }
 
 module "s3" {
