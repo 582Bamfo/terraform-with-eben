@@ -15,7 +15,7 @@ variable "instance_type" {
 
 variable "tags" {
   default = {
-    Environment = "test"
+    Environment = "prod"
     managed_by  = "terraform"
   }
   description = "tags for the resources"
