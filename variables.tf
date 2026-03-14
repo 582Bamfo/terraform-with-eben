@@ -35,3 +35,6 @@ variable "policy_arn" {
   type        = string
   default     = "arn:aws:iam::aws:policy/ReadOnlyAccess"
 }
+
+
+variable "iam_user_name" {}

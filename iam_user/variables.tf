@@ -1,7 +1,7 @@
 variable "iam_user_name" {
   description = "Name of the IAM user"
   type        = string
-  default     = "vcristian"
+#  default     = "vcristian"
 }
 
 variable "tags_iam" {
