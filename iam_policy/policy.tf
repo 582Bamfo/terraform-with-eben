@@ -1,6 +1,6 @@
 resource "aws_iam_group_policy_attachment" "policy" {
   group      = aws_iam_group.this.name
-  policy_arn = var.policy_arn
+  policy_arn = var.policy_name
 }
 
 
