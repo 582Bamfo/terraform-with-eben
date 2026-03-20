@@ -18,7 +18,52 @@ module "iam_group" {
 
 }
 
-module "vpc" {
+module "aws_vpc" {
+  source = "./module-vpc"
+
+}
+
+module "subnet" {
+  source = "./module-vpc.public_subnet.id"
+
+}
+
+module "subnet" {
+  source = "./module-vpc.private_subnet.id"
+}
+
+module "aws_internet_gateway" {
+  source = "./module-vpc.internet-gateway.id"
+}
+
+module "public-rt" {
+  source = "./module-vpc.public-rt.id"
+}
+
+module "aws_eip" {
+  source = "./module-vpc.eip.id"
+
+}
+
+module "nat-gateway" {
+  source = "./module-vpc.nat-gateway.id"
+
+}
+
+module "private-subnet-rt" {
+  source = "./module-vpc.private-subnet-rt.id"
+
+}
+
+module "nsubnet-assoc" {
+  source = "./module-vpc.subnet-assoc.id"
+}
+
+module "public-rt" {
+  source = "./module-vpc.public-rt"
+
+}
+/*module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.1.2"
 
@@ -32,4 +77,18 @@ module "vpc" {
   enable_nat_gateway = var.vpc_enable_nat_gateway
 
   tags = var.vpc_tags
-}
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
