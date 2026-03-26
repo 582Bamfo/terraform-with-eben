@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 region      = "eu-west-1"
 environment = "staging"
 vpc_cidr    = "10.2.0.0/16"
@@ -12,3 +13,8 @@ iam_users     = ["stage1", "stage2"]
 groups        = ["IT_support"]
 tags = {}
 subnet_id = "subnet-0123456789abcdef0"
+=======
+iam_user_name = "Lucy"
+instance_type = "t3.micro"
+s3_bucket     = "s3-bucket-lucy-staging"
+>>>>>>> d8bcde7bf534bf95e247ef501031b61aece37314

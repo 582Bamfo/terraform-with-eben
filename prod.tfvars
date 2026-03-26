@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 region      = "eu-west-1"
 environment = "prod"
 vpc_cidr    = "10.1.0.0/16"
@@ -12,3 +13,8 @@ iam_users     = ["prod1", "prod2"]
 groups        = ["IT_support"]
 tags = {}
 subnet_id = "subnet-0123456789abcdef0"
+=======
+iam_user_name = "eben"
+instance_type = "t2.small"
+s3_bucket     = "s3-bucket-lucy-prod"
+>>>>>>> d8bcde7bf534bf95e247ef501031b61aece37314

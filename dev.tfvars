@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 region      = "eu-west-1"
 environment = "dev"
 vpc_cidr    = "10.0.0.0/16"
@@ -12,3 +13,8 @@ iam_users     = ["dev1", "dev2"]
 groups        = ["IT_support", "developers"]
 tags = {}
 subnet_id = "subnet-0123456789abcdef0"
+=======
+iam_user_name = "vcristian"
+instance_type = "t2.micro"
+s3_bucket     = "s3-bucket-lucy-dev"
+>>>>>>> d8bcde7bf534bf95e247ef501031b61aece37314
