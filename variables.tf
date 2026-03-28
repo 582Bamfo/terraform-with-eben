@@ -1,3 +1,31 @@
+<<<<<<< HEAD
+variable "region" {}
+variable "environment" {}
+variable "vpc_cidr" {}
+variable "public_subnets" {
+  type = list(string)
+}
+variable "private_subnets" {
+  type = list(string)
+}
+variable "instance_type" {}
+variable "ami_id" {}
+variable "bucket_name" {}
+variable "iam_users" {
+  type = list(string)
+}
+
+variable "groups" {
+  type = list(string)
+
+}
+
+variable "subnet_id" {}
+
+variable "tags" {
+  
+}
+=======
 variable "ami" {
   default     = "ami-03446a3af42c5e74e"
   description = "ami for the instance"
@@ -38,3 +66,4 @@ variable "policy_arn" {
 
 
 variable "iam_user_name" {}
+>>>>>>> d8bcde7bf534bf95e247ef501031b61aece37314
